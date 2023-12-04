@@ -1,8 +1,8 @@
-import mongoose, { SchemaType } from "mongoose";
+import mongoose from 'mongoose';
 
 interface Posts {
   title: string;
-  creator: string;
+  author: string;
   location: string;
   description: string;
   selectedFile: string;
@@ -14,7 +14,7 @@ const messageSchema = new mongoose.Schema<Posts>({
     type: String,
     required: true,
   },
-  creator: {
+  author: {
     type: String,
     required: true,
   },
@@ -24,11 +24,11 @@ const messageSchema = new mongoose.Schema<Posts>({
   },
   description: {
     type: String,
-    default:""
+    default: '',
   },
   selectedFile: {
     type: String,
-    default:null
+    default: null,
   },
   likeCount: {
     type: Number,
@@ -40,6 +40,6 @@ const messageSchema = new mongoose.Schema<Posts>({
   },
 });
 
-const postMessage = mongoose.model("postmessage", messageSchema);
+const postMessage = mongoose.model('postmessage', messageSchema);
 
 export default postMessage;
