@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Post } from "../postSlice";
+import { Post } from "../store/postSlice";
 import { useDispatch } from "react-redux";
-import { createPost } from "../postSlice";
+import { createPost } from "../store/postSlice";
 const Form = () => {
 const [formData, setFormData]= useState<Post>({
     title:"",

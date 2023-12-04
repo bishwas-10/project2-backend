@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { getPosts } from '../postSlice';
+import { getPosts } from '../store/postSlice';
 
 const Posts = () => {
   const dispatch= useDispatch();
